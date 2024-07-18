@@ -3,7 +3,11 @@ import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import './App.css';
 
-function App({ title }: { title: string }) {
+function App({
+  title = 'Vite + React + Typescript',
+}: {
+  title: string;
+}) {
   const [count, setCount] = useState(0);
 
   return (

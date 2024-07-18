@@ -3,7 +3,9 @@ import App from './App';
 
 describe('App', () => {
   it('renders headline', () => {
-    render(<App title='React' />);
+    const title = 'React';
+    render(<App title={title} />);
+    expect(screen.getByRole('heading')).toHaveTextContent(title);
 
     screen.debug();
   });
